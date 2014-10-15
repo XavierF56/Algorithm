@@ -36,14 +36,12 @@ int main (int argc, char const* argv[])
 
 		
 		while (mp--) {
-			scanf("%d", &tmp);
-
+			cin >> tmp;
 			p.push_back(tmp);
 		}
 		
 		while (mq--) {
-			scanf("%d", &tmp);
-
+			cin >> tmp;
 			q.push_back(tmp);
 		}
 		
@@ -51,7 +49,7 @@ int main (int argc, char const* argv[])
 		int sum_q = accumulate(q.begin(), q.end(), 0);
 		
 		if (sum_p < sum_q) {
-			printf("Case %d: Not possible\n", n_initial-n);
+			cout << "Case " << n_initial-n << ": Not possible\n";
 		} else {
 			int st = 0;
 			int pp = 0;
@@ -63,7 +61,7 @@ int main (int argc, char const* argv[])
 					st = i + 1;
 				}
 			}
-			printf("Case %d: Possible from station %d\n", n_initial-n, st + 1);
+			cout << "Case " << n_initial-n << ": Possible from station " << st + 1 << endl;
 			
 		}
 	}
